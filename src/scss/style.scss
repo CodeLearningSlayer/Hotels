@@ -260,7 +260,7 @@
 }
 
 .swiper-button-next{
-    right:49%;
+    right:47%;
     transform: translateX(+100%);
     &::after{
         width: 15px;
@@ -307,4 +307,98 @@
         background-color: #fff;
         transform: rotate(-135deg);
     }
+}
+
+.footer{
+    padding: 90px 0 66px;
+    background-color: #14274A;
+    position: relative;
+    &::after{
+        content: ''; 
+        position: absolute; 
+        left: 50%;
+        transform: translateX(-50%); 
+        top: -130px;
+        width: 30px; 
+        border: 75px solid transparent; 
+        border-bottom: 55px solid #14274A;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo-footer{
+    background-color: transparent;
+    color:#fff;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    padding-bottom: 22px;
+    .logo-text{
+        padding: 0;
+    }
+    &__maintext{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    &__subtext{
+        font-size: 9px;
+        line-height: 10px;
+    }
+}
+
+.contacts{
+    &__item{
+        font-size: 14px;
+        line-height: 17px;
+    }
+    &__link{
+        color:#fff;
+    }
+}
+
+.nav-info,
+.social-list{
+    &__link{
+        color: #fff;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+.social-list{
+    &__link{
+        position: relative;
+        padding-left: 30px;
+    }
+    &__link--facebook::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top:0px;
+            width: 10px;
+            height: 18px;
+            background-image: url("@img/icons/facebook.svg"); 
+        }
+    &__link--twitter::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top:0px;
+            width: 19px;
+            height: 15px;
+            background-image: url("@img/icons/twitter.svg"); 
+        }
+    &__link--instagram::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top:0px;
+            width: 19px;
+            height: 19px;
+            background-image: url("@img/icons/instagram.svg"); 
+        }
 }
