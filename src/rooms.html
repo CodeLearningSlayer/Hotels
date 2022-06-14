@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <header class="header header-rooms">
+      <div class="container">
+        <div class="header-top">
+          <div class="header-top__inner">
+            <a class="logo" href="#">
+              <span class="logo__maintext logo-text">Luxury</span>
+              <span class="logo__subtext logo-text">Hotels</span>
+            </a>
+            <div class="user-nav">
+              <ul class="user-nav__list nav-list">
+                <li class="nav-list__item">
+                  <a
+                    class="nav-list__link nav-list__link--active"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-list__item">
+                  <a class="nav-list__link" href="facilities.html"
+                    >Facilities</a
+                  >
+                </li>
+                <li class="nav-list__item">
+                  <a class="nav-list__link" href="#">Rooms</a>
+                </li>
+                <li class="nav-list__item">
+                  <a class="nav-list__link" href="#">Contact-us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header__content content">
+          <div class="content-text">
+            <h5 class="content-text__top">WELCOME TO</h5>
+            <h3 class="content-text__main">Luxury</h3>
+            <h6 class="content-text__sub">Hotels</h6>
+            <p class="content-text__info">
+              Book your stay and enjoy Luxury redefined at the most affordable
+              rates.
+            </p>
+          </div>
+        </div>
+        <a class="book" href="#">
+          <span class="book__text">book now</span>
+        </a>
+        <div class="scroll">
+          <span class="scroll__text">Scroll</span>
+          <div class="scroll__btn"></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="places">
+      <div class="container">
+        <h3 class="places__title title">rooms and rates</h3>
+        <h6 class="places__description description">
+          Each of our bright, light-flooded rooms come with everything you could
+          possibly need for a comfortable stay. And yes, <br />
+          comfort isn’t our only objective, we also value good design, sleek
+          contemporary furnishing complemented <br />
+          by the rich tones of nature’s palette as visible from our rooms’
+          sea-view windows and terraces.
+        </h6>
+        <div class="place-item">
+            <div class="swiper places__item single-place">
+                <div class="swiper-wrapper place-slider">
+                    <div class="swiper-slide single-place__item">
+                        <img class="single-place__img" src="@img/places/1.jpg" alt="" >
+                    </div>
+                    <div class="swiper-slide single-place__item">
+                        <img class="single-place__img" src="@img/places/1.jpg" alt="" >
+                    </div>
+                    <div class="swiper-slide single-place__item">
+                        <img class="single-place__img" src="@img/places/1.jpg" alt="" >
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <h4 class="single-place__name name">
+                Single room
+            </h4>
+            <div class="place-item__bottom">
+                <a class="place-item__details" href="#">VIEW ROOM DETAILS</a>
+                <div class="place-item__price">$147  Avg/night</div>
+            </div>
+        </div>
+
+        <div class="place-item">
+            <div class="swiper places__item double-place">
+                <div class="swiper-wrapper place-slider">
+                    <div class="swiper-slide double-place__item">
+                        <img class="double-place__img" src="@img/places/2.jpg" alt="" >
+                    </div>
+                    <div class="swiper-slide double-place__item">
+                        <img class="double-place__img" src="@img/places/2.jpg" alt="" >
+                    </div>
+                    <div class="swiper-slide double-place__item">
+                        <img class="double-place__img" src="@img/places/2.jpg" alt="" >
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <h4 class="double-place__name name">
+                Double room
+            </h4>
+            <div class="place-item__bottom">
+                <a class="place-item__details" href="#">VIEW ROOM DETAILS</a>
+                <div class="place-item__price">$155  Avg/night</div>
+            </div>
+        </div>
+        
+        <div class="place-item">
+            <div class="swiper places__item twin-place">
+                <div class="swiper-wrapper place-slider">
+                    <div class="swiper-slide twin-place__item">
+                        <img class="twin-place__img" src="@img/places/3.jpg" alt="" >
+                    </div>
+                    <div class="swiper-slide twin-place__item">
+                        <img class="twin-place__img" src="@img/places/3.jpg" alt="" >
+                    </div>
+                    <div class="swiper-slide twin-place__item">
+                        <img class="twin-place__img" src="@img/places/3.jpg" alt="" >
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <h4 class="twin-place__name name">
+                twin room
+            </h4>
+            <div class="place-item__bottom">
+                <a class="place-item__details" href="#">VIEW ROOM DETAILS</a>
+                <div class="place-item__price">$155  Avg/night</div>
+            </div>
+        </div>
+
+      </div>
+    </section>
+
+    @@include("html/testimonials.html")
+
+    @@include("html/footer.html")
+  </body>
+  <script src="js/app.min.js"></script>
+</html>
