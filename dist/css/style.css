@@ -916,10 +916,12 @@ body {
 }
 
 .logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 256px;
   height: 150px;
   background-color: #E0B973;
-  color: #14274A;
   text-transform: uppercase;
   text-align: center;
   font-family: AGaramondPro;
@@ -938,7 +940,11 @@ body {
   padding-bottom: 45px;
 }
 
-.logo-text {
+.header .logo-text__item {
+  color: #14274A;
+}
+
+.logo-text__item {
   display: block;
 }
 
@@ -1213,7 +1219,7 @@ body {
   display: inline-block;
   padding-bottom: 22px;
 }
-.logo-footer .logo-text {
+.logo-footer .logo-text__item {
   padding: 0;
 }
 .logo-footer__maintext {
@@ -1568,4 +1574,433 @@ body {
   width: 150px;
   height: 59px;
   text-transform: none;
+}
+
+.burger-btn {
+  display: none;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.burger-btn__switch {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #14274A;
+}
+.burger-btn::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 30px;
+  background-color: #14274A;
+  height: 2px;
+}
+.burger-btn::before {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  background-color: #14274A;
+  width: 30px;
+  height: 2px;
+}
+.burger-btn__switch, .burger-btn::before, .burger-btn::after {
+  transition: transform 0.3s ease;
+}
+.burger-btn--active .burger-btn__switch {
+  transform: rotate(-45deg) translate(7px, 11px);
+  width: 13px;
+}
+.burger-btn--active::after {
+  transform: rotate(90deg) translateY(-0.2px);
+}
+.burger-btn--active::before {
+  width: 13px;
+  transform: rotate(45deg) translate(0px, -6px);
+}
+
+@media (max-width: 1310px) {
+  .rooms__info {
+    line-height: 52px;
+    margin-bottom: 60px;
+  }
+  .room__img {
+    max-width: 600px;
+  }
+  .room__title {
+    font-size: 48px;
+    line-height: 58px;
+  }
+  .room__text {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .place-item__bottom {
+    padding: 79px 120px;
+  }
+  .contact {
+    padding: 110px 0 80px;
+  }
+  .contact__info {
+    margin-bottom: 90px;
+    text-align: center;
+    margin-bottom: 55px;
+  }
+  .contact__wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .contact__left-box {
+    margin-bottom: 50px;
+  }
+  .contact__btn {
+    width: 100%;
+    display: block;
+    float: none;
+    max-width: none;
+  }
+  .contact__input {
+    margin-bottom: 15px;
+  }
+  .contact__right-box {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 1050px) {
+  .nav-list__item + li.nav-list__item {
+    margin-left: 35px;
+  }
+  .room {
+    flex-direction: column-reverse;
+  }
+  .room__img {
+    max-width: 100%;
+  }
+  .room__side-info {
+    border: none;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .room__link {
+    margin: 0 auto;
+  }
+  .footer__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+  .footer__item:nth-child(even) {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    text-align: right;
+  }
+  .place-item__bottom {
+    padding: 79px 60px;
+  }
+}
+@media (max-width: 865px) {
+  .header-top .logo {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .header-top__inner {
+    flex-direction: column;
+  }
+  .content-text__top {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  .content-text__main {
+    font-size: 105px;
+    line-height: 130px;
+  }
+  .content-text__sub {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .rooms__info {
+    margin-bottom: 30px;
+  }
+  .facilities {
+    padding: 70px 55px;
+  }
+  .facilities__item + .facilities__item {
+    margin-top: 90px;
+  }
+  .facilities__name {
+    width: 80%;
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .place-item__price {
+    width: 200px;
+  }
+  #map {
+    max-width: 700px;
+    width: 100%;
+  }
+}
+@media (max-width: 775px) {
+  .place-item__bottom {
+    flex-direction: column;
+    padding: 50px;
+  }
+  .place-item__details {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 625px) {
+  .testimonials__title {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .testimonials__text {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .testimonials .swiper {
+    max-width: 100%;
+  }
+  .header-contact__title {
+    font-size: 60px;
+    line-height: 75px;
+    padding-bottom: 90px;
+  }
+  .contact {
+    padding-top: 75px;
+  }
+  .contact__maintext {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .contact__subtext {
+    font-size: 25px;
+    line-height: 32px;
+  }
+  .contact__link {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 595px) {
+  .burger-btn {
+    display: block;
+  }
+  .user-nav {
+    position: absolute;
+    width: 100%;
+    padding: 0 30px;
+    top: 110px;
+    text-align: center;
+    border-radius: 0 0 25% 25%;
+  }
+  .user-nav__list {
+    display: block;
+    background-color: #E0B973;
+  }
+  ul.nav-list {
+    padding: 30px 0;
+    border-radius: 0 0 25% 25%;
+    transform: translateY(-200%);
+    transition: transform 0.3s ease;
+  }
+  ul.nav-list--active {
+    transform: translateY(0%);
+  }
+  .nav-list__item {
+    margin-top: 10px;
+  }
+  .nav-list__item + li.nav-list__item {
+    margin-left: 0;
+  }
+  .header-top {
+    margin-bottom: 110px;
+  }
+  .content-text__main {
+    font-size: 70px;
+    line-height: 85px;
+  }
+  .rooms {
+    padding: 49px 0 10px;
+  }
+  .rooms__info {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .room__title {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 15px;
+  }
+  .room__side-info {
+    margin-top: 15px;
+    padding-left: 0;
+    margin-right: 0;
+  }
+  .facilities {
+    padding: 50px 0;
+  }
+  .facilities__name {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .facilities__title {
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 20px;
+  }
+  .title {
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 20px;
+  }
+  .places {
+    padding: 60px 0;
+  }
+  .place-item__details {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .name {
+    font-size: 50px;
+  }
+}
+@media (max-width: 535px) {
+  .footer__wrapper {
+    grid-template-areas: "A B" "C C" "D D";
+  }
+  .footer__item:nth-child(1) {
+    grid-area: A;
+  }
+  .footer__item:nth-child(2) {
+    grid-area: B;
+  }
+  .footer__item:nth-child(3) {
+    grid-area: C;
+  }
+  .footer__item:nth-child(4) {
+    grid-area: D;
+  }
+  .footer__item:nth-child(n+3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .place-item__details {
+    padding-left: 65px;
+    text-align: center;
+  }
+  .place-item__details::after {
+    top: 13px;
+    left: 0;
+  }
+  .place-item__bottom {
+    padding: 30px;
+  }
+  .name {
+    line-height: 50px;
+    font-size: 20px;
+    padding: 0;
+  }
+  .title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .description {
+    margin-bottom: 30px;
+  }
+  .header-contact__title {
+    font-size: 40px;
+    line-height: 50px;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 365px) {
+  .header-top {
+    margin-bottom: 65px;
+  }
+  .content-text {
+    text-align: center;
+    margin-bottom: 65px;
+  }
+  .content-text__top {
+    font-size: 35px;
+    line-height: 48px;
+  }
+  .content-text__main {
+    font-size: 58px;
+    line-height: 65px;
+  }
+  .content-text__sub {
+    font-size: 42px;
+    line-height: 50px;
+  }
+  .content-text__info {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .book {
+    width: 230px;
+    margin-bottom: 50px;
+  }
+  .room__img {
+    display: none;
+  }
+  .room__side-info {
+    margin-top: 0px;
+  }
+  .testimonials__text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .testimonials__author {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .testimonials .swiper-button-prev,
+.testimonials .swiper-button-next {
+    top: 48%;
+  }
+  .footer__wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "A" "B" "C" "D";
+  }
+  .footer__item:nth-child(n) {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .burger-btn {
+    top: -10px;
+  }
+  .facilities__name {
+    font-size: 20px;
+    line-height: 27px;
+    padding-top: 5px;
+  }
+  .contact__link {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 335px) {
+  .place-item__details::after {
+    top: 23px;
+  }
+  .header-contact__title {
+    font-size: 35px;
+    line-height: 42px;
+  }
 }

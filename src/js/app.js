@@ -50,6 +50,11 @@ if (open && modal_container && close)
     });
 }
 
-
+const burgerBtn = document.querySelector(".burger-btn");
+const navList = document.querySelector(".nav-list");
+burgerBtn.addEventListener("click", () => {
+    (burgerBtn.classList.contains("burger-btn--active") === true) ? burgerBtn.classList.remove("burger-btn--active") : burgerBtn.classList.add("burger-btn--active");
+    (navList.classList.contains("nav-list--active") === true) ? navList.classList.remove("nav-list--active") : navList.classList.add("nav-list--active");
+});
 
 flsFunctions.testWebP();

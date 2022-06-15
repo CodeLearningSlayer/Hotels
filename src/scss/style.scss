@@ -2,7 +2,6 @@
 @import "reset";
 @import "vars";
 @import "libs";
-@import "media";
 @import "global";
 
 .container{
@@ -50,10 +49,12 @@
 }
 
 .logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 256px;
     height: 150px;
     background-color: #E0B973;
-    color:#14274A;
     text-transform: uppercase;
     text-align: center;
     font-family: AGaramondPro;
@@ -72,7 +73,11 @@
     }
 }
 
-.logo-text{
+.header .logo-text__item{
+    color:#14274A;
+}
+
+.logo-text__item{
     display: block;
 }
 
@@ -357,7 +362,7 @@
     height: auto;
     display: inline-block;
     padding-bottom: 22px;
-    .logo-text{
+    .logo-text__item{
         padding: 0;
     }
     &__maintext{
@@ -736,3 +741,61 @@
         text-transform: none;
     }
 }
+
+.burger-btn{
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &__switch{
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 30px;
+        height: 2px;
+        top:50%;
+        transform: translateY(-50%);
+        background-color: #14274A;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        top:6px;
+        left: 0;
+        width: 30px;
+        background-color: #14274A;
+        height: 2px;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        bottom:6px;
+        left: 0;
+        background-color: #14274A;
+        width: 30px;
+        height: 2px;
+    }
+    &__switch,
+    &::before,
+    &::after{
+        transition: transform .3s ease;
+    }
+    &--active{
+        .burger-btn__switch{
+            transform: rotate(-45deg) translate(7px, 11px);
+            width: 13px;
+        }
+        &::after{
+            transform: rotate(90deg) translateY(-0.2px);
+        }
+        &::before{
+            width: 13px;
+            transform: rotate(45deg) translate(0px, -6px);
+        }
+    }
+}
+
+@import "media";

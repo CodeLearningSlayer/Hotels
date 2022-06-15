@@ -1,0 +1,450 @@
+@media(max-width:1310px){
+    .rooms{
+        &__info{
+            line-height: 52px;
+            margin-bottom: 60px;
+        }
+    }
+    .room{
+        &__img{
+            max-width: 600px;
+        }
+        &__title{
+            font-size: 48px;
+            line-height: 58px;
+        }
+        &__text{
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
+    .place-item{
+        &__bottom{
+            padding: 79px 120px;
+        }
+    }
+    .contact{
+        padding: 110px 0 80px;
+        &__info{
+            margin-bottom: 90px;
+            text-align: center;
+            margin-bottom: 55px;
+        }
+        &__wrapper{
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        &__left-box{
+            margin-bottom: 50px;
+        }
+        &__btn{
+            width: 100%; 
+            display: block;
+            float: none;
+            max-width: none;
+        }
+        &__input{
+            margin-bottom: 15px;
+        }
+        &__right-box{
+            margin-bottom: 50px;
+        }
+    }
+}
+
+
+@media(max-width:1050px){
+    .nav-list{
+        &__item+li.nav-list__item{
+            margin-left: 35px;
+        }
+    }
+    .room{
+        flex-direction: column-reverse;
+        &__img{
+            max-width: 100%;
+        }
+        &__side-info{
+            border: none;
+            margin-top: 30px;
+            text-align: center;
+        }
+        &__link{
+            margin: 0 auto;
+        }
+    }
+    .footer{
+        &__wrapper{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+        &__item:nth-child(even){
+            display: flex;
+            align-items: end;
+            flex-direction: column;
+            text-align: right;
+        }
+    }
+    .place-item{
+        &__bottom{
+            padding: 79px 60px;
+        }
+    }
+}
+
+@media(max-width:865px){
+    .header-top{
+        .logo{
+            margin-bottom: 30px;
+            width: 100%;
+        }
+        &__inner{
+            flex-direction: column;
+        }
+    }
+    .content-text{
+        &__top{
+            font-size: 40px;
+            line-height: 60px;
+        }
+        &__main{
+            font-size: 105px;
+            line-height: 130px;
+        }
+        &__sub{
+            font-size: 50px;
+            line-height: 60px;
+        }
+    }
+    .rooms{
+        &__info{
+            margin-bottom: 30px;
+        }
+    }
+    .facilities{
+        padding: 70px 55px; 
+        &__item+.facilities__item{
+            margin-top: 90px;
+        }
+        &__name{
+            width: 80%;
+            font-size: 36px;
+            line-height: 48px;
+        }
+    }
+    .place-item{
+        &__price{
+            width: 200px;
+        }
+    }
+    #map{
+        max-width: 700px;
+        width: 100%;
+    }
+}
+
+@media(max-width:775px){
+    .place-item{
+        &__bottom{
+            flex-direction: column;
+            padding: 50px;
+        }
+        &__details{
+            margin-bottom: 30px;    
+        }
+    }
+}
+
+@media(max-width:625px){
+    .testimonials{
+        &__title{
+            font-size: 45px;
+            line-height: 50px;
+        }
+        &__text{
+            font-size: 25px;
+            line-height: 30px;
+        }
+        .swiper{
+            max-width: 100%;
+        }
+    }
+    .header-contact{
+        &__title{
+            font-size: 60px;
+            line-height: 75px;
+            padding-bottom: 90px;
+        }
+    }
+    .contact{
+        padding-top: 75px;
+        &__maintext{
+            font-size: 40px;
+            line-height: 50px;
+        }
+        &__subtext{
+            font-size: 25px;
+            line-height: 32px;
+        }
+        &__link{
+            font-size: 25px;
+            line-height: 30px;
+        }
+    }
+    
+}
+
+
+@media(max-width:595px){
+    .burger-btn{
+        display: block;
+    }
+    .user-nav{
+        position: absolute;
+        width: 100%;
+        padding: 0 30px;
+        top:110px;
+        text-align: center;
+        border-radius: 0 0 25% 25%;
+
+        &__list{
+            display: block;
+            background-color: $sand;
+        }
+    }
+    ul.nav-list{
+        padding: 30px 0;
+        border-radius: 0 0 25% 25%;
+        transform: translateY(-200%);
+        transition: transform .3s ease;
+        &--active{
+            transform: translateY(0%);
+        }
+    }
+    .nav-list{
+        &__item{
+            margin-top: 10px;
+        }
+        &__item+li.nav-list__item{
+            margin-left: 0;
+        }
+    }
+    .header-top{
+        margin-bottom: 110px;
+    }
+    .content-text{
+        &__main{
+            font-size: 70px;
+            line-height: 85px;
+        }
+    }
+    .rooms{
+        padding: 49px 0 10px;
+        &__info{
+            font-size: 25px;
+            line-height: 30px;
+        }
+    }
+    .room{
+        &__title{
+            font-size: 36px;
+            line-height: 42px;
+            margin-bottom: 15px;
+        }
+        &__side-info{
+            margin-top: 15px;
+            padding-left: 0;
+            margin-right: 0;
+        }
+    }
+    .facilities{
+        padding: 50px 0;
+        &__name{
+            font-size: 25px;
+            line-height: 30px;
+        }
+        &__title{
+            font-size: 40px;
+            line-height: 60px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .title{
+        font-size: 48px;
+        line-height: 60px;
+        margin-bottom: 20px;
+    }
+    .places{
+        padding: 60px 0;
+    }
+    .place-item{
+        &__details{
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
+    .name{
+        font-size: 50px;
+    }
+}
+
+@media(max-width:535px){
+    .footer{
+        &__wrapper{
+            grid-template-areas: 
+            "A B"
+            "C C" 
+            "D D";
+        }
+        &__item:nth-child(1){
+            grid-area: A;
+        }
+        &__item:nth-child(2){
+            grid-area: B;
+        }
+        &__item:nth-child(3){
+            grid-area: C;
+        }
+        &__item:nth-child(4){
+            grid-area: D;
+        }
+        &__item:nth-child(n+3){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .place-item{
+        &__details{
+            padding-left: 65px;
+            text-align: center;
+        }
+        &__details::after{
+            top:13px;
+            left: 0;
+        }
+        &__bottom{
+            padding: 30px;
+        }
+    }
+    .name{
+        line-height: 50px;
+        font-size: 20px;
+        padding: 0;
+    }
+    .title{
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .description{
+        margin-bottom: 30px;
+    }
+    .header-contact{
+        &__title{
+            font-size: 40px;
+            line-height: 50px;
+            padding-bottom: 70px;
+        }
+    }
+}
+
+@media(max-width:365px){
+    .header-top{
+        margin-bottom: 65px;
+    }
+    .content-text{
+        text-align: center;
+        margin-bottom: 65px;
+        &__top{
+            font-size: 35px;
+            line-height: 48px;
+        }
+        &__main{
+            font-size: 58px;
+            line-height: 65px;
+        }
+        &__sub{
+            font-size: 42px;
+            line-height: 50px;
+        }
+        &__info{
+            font-size: 20px;
+            line-height: 25px;  
+        }
+    }
+    .book{
+        width: 230px;
+        margin-bottom: 50px;
+    }
+    .room{
+        &__img{
+            display: none;
+        }
+        &__side-info{
+            margin-top: 0px;
+        }
+    }
+    .testimonials{
+        &__text{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        &__author{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .swiper-button-prev,
+        .swiper-button-next{
+            top:48%;
+        }
+    }
+    .footer{
+        &__wrapper{
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas: 
+            "A"
+            "B"
+            "C"
+            "D";
+        }
+        &__item:nth-child(n){
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    .burger-btn{
+        top:-10px;
+    }
+    .facilities{
+        &__name{
+            font-size: 20px;
+            line-height: 27px;
+            padding-top: 5px;
+        }
+    }
+    .contact{
+        &__link{
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
+}
+
+@media(max-width:335px){
+    .place-item{
+        &__details::after{
+            top:23px;
+        }
+    }
+    .header-contact{
+        &__title{
+            font-size: 35px;
+            line-height: 42px;
+        }
+    }
+}

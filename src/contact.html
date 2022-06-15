@@ -12,10 +12,15 @@
       <div class="container">
         <div class="header-top">
           <div class="header-top__inner">
-            <a class="logo" href="#">
-              <span class="logo__maintext logo-text">Luxury</span>
-              <span class="logo__subtext logo-text">Hotels</span>
-            </a>
+            <div class="logo">
+                <a class="logo-text" href="#">
+                  <span class="logo__maintext logo-text__item">Luxury</span>
+                  <span class="logo__subtext logo-text__item">Hotels</span>
+                </a>
+                <button class="burger-btn">
+                  <span class="burger-btn__switch"></span>
+                </button>
+              </div>
             <div class="user-nav">
               <ul class="user-nav__list nav-list">
                 <li class="nav-list__item">
@@ -41,6 +46,7 @@
         <h2 class="header-contact__title">Contact-us</h2>
       </div>
     </header>
+
     <section class="contact">
         <div class="container">
             <div class="contact__info">
@@ -86,6 +92,8 @@
         </div>
         
     </section>
+
+
     @@include("html/footer.html")
   </body>
   <script src="js/app.min.js"></script>
