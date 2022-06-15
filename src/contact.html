@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <header class="header header-contact">
+      <div class="container">
+        <div class="header-top">
+          <div class="header-top__inner">
+            <a class="logo" href="#">
+              <span class="logo__maintext logo-text">Luxury</span>
+              <span class="logo__subtext logo-text">Hotels</span>
+            </a>
+            <div class="user-nav">
+              <ul class="user-nav__list nav-list">
+                <li class="nav-list__item">
+                  <a class="nav-list__link" href="index.html">Home</a>
+                </li>
+                <li class="nav-list__item">
+                  <a class="nav-list__link" href="facilities.html"
+                    >Facilities</a
+                  >
+                </li>
+                <li class="nav-list__item">
+                  <a class="nav-list__link" href="rooms.html">Rooms</a>
+                </li>
+                <li class="nav-list__item">
+                  <a class="nav-list__link nav-list__link--active" href="#"
+                    >Contact-us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <h2 class="header-contact__title">Contact-us</h2>
+      </div>
+    </header>
+    <section class="contact">
+        <div class="container">
+            <div class="contact__info">
+                <h4 class="contact__maintext">
+                    WE ARE HERE FOR YOU
+                </h4>
+                <p class="contact__subtext">
+                    At Luxury Hotels, we take our customers seriously. Do you have any enquiries, compaints or requests, 
+    please forward it to our support desk and we will get back to you as soon as possible.
+                </p>
+            </div>
+            <div class="contact__wrapper">
+                <div class="contact__left-box">
+                    <a class="contact__link contact__adress" href="#">497 Evergreen Rd. Roseville, <br>
+                        CA 95673
+                    </a>
+                    <button id="open" class="contact__link contact__map-link">View map</button>
+                    <a class="contact__link contact__phone" href="tel:+44345678903">Phone: +44 345 678 903</a>
+                    <a class="contact__link contact__mail" href="mailto:luxury_hotels@gmail.com" >Email: luxury_hotels@gmail.com</a>
+                </div>
+                <div class="contact__right-box">
+                    <form class="contact__form" action="">
+                        <p class="contact__input-name">Name</p>
+                        <input type="text" class="contact__input contact__name">
+                        <p class="contact__input-name">Email Adress</p>
+                        <input type="text" class="contact__input contact__email">
+                        <p class="contact__input-name">Message</p>
+                        <textarea type="text" class="contact__input contact__message">
+                        </textarea>
+                        <button class="contact__btn" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div id="modal_container" class="contact-modal modal-container">
+                <div class="contact__modal modal">
+                    <h3 class="modal__title">
+                        You can find us here
+                    </h3>
+                    <div id="map" class="modal__map"></div>
+                    <button id="close" class="modal__close">Close</button>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    @@include("html/footer.html")
+  </body>
+  <script src="js/app.min.js"></script>
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly"
+      defer
+    ></script>
+    <script>
+        function initMap() {
+        // The location of Uluru
+        const myPlace = { lat: 56.9972, lng: 40.9714 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 12,
+          center: myPlace,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: myPlace,
+          map: map,
+        });
+      }
+      
+      window.initMap = initMap;
+    </script>
+</html>
